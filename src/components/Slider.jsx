@@ -1,84 +1,117 @@
-import React, { useState, useEffect} from 'react';
+import React, { useRef } from 'react';
 import 'animate.css';
-
+import { Link } from 'react-router-dom';
 
 const slides = [
-    {
-      image: '/little-homeless-boy+web.jpg',
-      title: <h1 className="animate__animated animate__animate__bounceInDown text-4xl font-bold text-white">To the Homeless People</h1>,
-    },
-    {
-      image: '/slide2.jpg',
-      title: <h1 className="animate__animated animate__bounceInDown text-4xl font-bold text-white">
-      To the Homeless People
-    </h1>
-    },
-    {
-      image: '/slide3.jpg',
-      title: <h1 className="animate__animated animate__animate__bounceInDown text-4xl font-bold text-white">Make a Difference Today</h1>,
-    },
-  ];
+  {
+    image: '/little-homeless-boy+web.jpg',
+    title: 'Raising Hope\nTo the Homeless People',
+  },
+  {
+    image: '/slide2.jpg',
+    title: 'To the Homeless People',
+  },
+  {
+    image: '/slide3.jpg',
+    title: 'Make a Difference Today',
+  },
+  {
+    image: '/Rectangle 43.png',
+    title: 'Make a Difference Today',
+  },
+  {
+    image: '/Rectangle 41.png',
+    title: 'Make a Difference Today',
+  },
+  {
+    image: '/Rectangle 40.png',
+    title: 'Make a Difference Today',
+  },
+  {
+    image: '/1.jpeg',
+    title: 'Make a Difference Today',
+  },
+  {
+    image: '/3.avif',
+    title: 'Make a Difference Today',
+  },
+  {
+    image: '/2.avif',
+    title: 'Make a Difference Today',
+  },
+];
 
 const Slider = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const [key, setKey] = useState(0); // Unique key to force re-render of text content
-  
-    // Update the key whenever the slide changes to trigger animation
-    useEffect(() => {
-      setKey((prev) => prev + 1);
-    }, [currentSlide]);
-   
+  const sliderRef = useRef(null);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  const scroll = (direction) => {
+    const slider = sliderRef.current;
+    const scrollAmount = slider.offsetWidth;
+    if (direction === 'left') {
+      slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+      slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
   };
 
   return (
-    <div className="relative w-full h-[400px] overflow-hidden">
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute w-full h-full transition-opacity duration-500 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <img
-            src={slide.image}
-            alt={`Slide ${index + 1}`}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute top-1/2 left-5 transform -translate-y-1/2 text-white text-shadow">
-            <h1 className="text-5xl font-bold mb-5">{slide.title}</h1>
-            <div className="flex gap-4">
-              <button className="bg-orange-500 text-white px-5 py-2 rounded-md">
-                JOIN US NOW
-              </button>
-              <button className="border-2 border-white text-white px-5 py-2 rounded-md">
-                WATCH THE VIDEO
-              </button>
+    <div className="relative bg-black w-full h-[800px] overflow-hidden">
+      <div
+        ref={sliderRef}
+        className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory w-full h-full"
+      >
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 w-full h-full relative snap-center"
+          >
+            <img
+              src={slide.image}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute top-1/2 left-5 transform -translate-y-1/2 text-white">
+              <h1 className="animate__animated animate__fadeInUp text-5xl font-bold whitespace-pre-line">
+                {slide.title}
+              </h1>
+              <div className="mt-4 display flex  gap-10">
+              <div className="mt-4">
+              <Link
+                        to="/DonateNowPage"
+                        className="bg-orange-500 text-white px-6 py-3 rounded-md">
+                        DONATE NOW
+                    </Link>
+              </div>
+              <div className="mt-4 bg-transparent">
+                <Link
+                      to="/sign-up" 
+                      className="bg-transparent text-white px-6 py-3 rounded-md border border-white">
+                  SIGN-UP
+                </Link>
+              </div>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-      <button
-        onClick={prevSlide}
-        className="absolute top-1/2 right+3 transform -translate-y-1/2 bg- bg-opacity-100 text-white p-2 rounded-full"
-      >
-        ←
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute top-1/2 right-3 transform -translate-y-1/2 bg- bg-opacity-50 text-white p-2 rounded-full"
-      >
-        →
-      </button>
+        ))}
+      </div>
+
+      {/* Scroll Buttons on the right side */}
+      <div className="absolute top-1/2 right-3 transform -translate-y-1/2 flex flex-row gap-4 z-10">
+        <button
+          onClick={() => scroll('left')}
+          className="text-white p-4 rounded-full border-2 border-white text-xl"
+        >
+          ←
+        </button>
+        <button
+          onClick={() => scroll('right')}
+          className="text-white p-4 rounded-full border-2 border-white text-xl"
+        >
+          →
+        </button>
+      </div>
     </div>
   );
 };
-
 
 export default Slider;

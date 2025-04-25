@@ -1,14 +1,22 @@
 import React from 'react';
 import 'animate.css'; 
+import photo1 from '/photostream1.jpg';
+import photo2 from '/photostream2.jpg';
+import photo3 from '/photostream3.jpg';
+import photo4 from '/photostream4.webp';
+import photo5 from '/photostream5.webp';
+import photo6 from '/photostream6.webp';
+
 
 const FooterSection = () => {
+    const photos = [photo1, photo2, photo3, photo4, photo5, photo6];
+
   return (
    
-    <div className="bg-white w-full">
+    <div className=" w-full">
          <h1 className="text-4xl font-bold text-center text-yellow-500 mb-8 animate__animated animate__fadeInDown">
          Our World Wide Partner</h1>
-    {/* Logos Section */}
-        <div className="bg-white py-8 w-full">
+        <div className=" py-8 w-full">
           <div className="max-w-3xl mx-auto px-2 flex justify-between items-center flex-wrap gap-2">
             <img src="/semicolon-logo.svg" alt="Logo 1" className="h-10 animate__animated animate__fadeIn" />
             <img src="/samsung-logo.png" alt="Logo 2" className="h-10 animate__animated animate__fadeIn" />
@@ -17,50 +25,39 @@ const FooterSection = () => {
           </div>
         </div>
 
-        {/* Footer Section */}
-        <footer className="bg-yellow-200 w-full">
+        <footer className=" w-[100%]">
           <div className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Left Column with Background Image */}
             <div
             className="relative text-white p-8 rounded-lg w-full"
             style={{
-              backgroundImage: `url('/footer-bg.jpg')`, // Replace with your image path
+              backgroundImage: `url('/footer-bg.jpg')`, 
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
             >
-            {/* Overlay for better text visibility */}
-            <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg"></div>
-            <div className="relative z-10 animate__animated animate__fadeInLeft">
-              {/* Logo */}
-              <div className="flex items-center mb-4">
+            <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg "></div>
+            <div className="relative z-10 animate__animated animate__fadeInLeft mt-10">
+              <div className="flex items-center mb-4 mt-10">
                 <img src="/image.jpg" alt="Gracious Logo" className="h-10 mr-2" />
                 <h3 className="text-xl font-bold">StanKay Donation Hub</h3>
               </div>
-
-              {/* Description */}
-              <p className="text-sm mb-4">
-                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+``
+              <p className="text-sm mb-4 mt-10">
               </p>
               <p>  
               </p>
 
-              {/* Address */}
-              <p className="text-sm mb-2">
+              <p className="text-sm mb-2 mt-10">
                 312, Sabo Yaba Lagos State, Nigeria.
               </p>
 
-              {/* Phone */}
-              <p className="text-sm mb-2">+12345678909</p>
+              <p className="text-sm mb-2 mt-10">+234-814-701-4806</p>
 
-              {/* Email */}
-              <p className="text-sm mb-2">info@hope4raise.com</p>
+              <p className="text-sm mb-2 mt-10">info@StanKay-donation@gmail.com</p>
 
-              {/* Working Hours */}
-              <p className="text-sm mb-4">Mon - Fri / 9:00 AM - 19:00 PM</p>
+              <p className="text-sm mb-4 mt-10">Mon - Fri / 9:00 AM - 19:00 PM</p>
 
-              {/* Social Media Icons */}
-              <div className="flex space-x-4">
+              <div className="flex space-x-15 mt-30">
                 <a href="#" className="text-white hover:text-amber-500">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
@@ -90,9 +87,7 @@ const FooterSection = () => {
             </div>
           </div>
 
-          {/* Right Column */}
           <div className="p-8 animate__animated animate__fadeInRight">
-            {/* Newsletter */}
             <h3 className="text-2xl font-bold text-gray-800 mb-4">Get Update Every Week</h3>
             <div className="flex mb-8">
               <input
@@ -105,16 +100,13 @@ const FooterSection = () => {
               </button>
             </div>
 
-            {/* Photostream */}
             <h4 className="text-lg font-semibold text-gray-800 mb-4">Our Photostream</h4>
-            {/* Placeholder for photostream images */}
-            <div className="grid grid-cols-3 gap-2 mb-8">
-              {[...Array(9)].map((_, index) => (
-                <div key={index} className="bg-gray-300 h-16 rounded"></div>
+            <div className="grid grid-cols-2 gap-2 w-100 h-50 mb-8">
+              {photos.map((image, index) => (
+                <img key={index} src={image} alt={`Photostream ${index + 1}`} className="w-full h-16 object-cover rounded" />
               ))}
             </div>
 
-            {/* Links */}
             <h4 className="text-lg font-semibold text-gray-800 mb-4">About Us</h4>
             <ul className="text-gray-600 space-y-2 mb-8">
               <li>
@@ -127,19 +119,14 @@ const FooterSection = () => {
                   Our Services
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:text-amber-500">
-                  Meet Doctors
-                </a>
-              </li>
+             
             </ul>
 
-            {/* Contact */}
             <div className="flex items-center">
               <svg className="w-6 h-6 text-amber-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h18M3 5v14h18V5M3 5l9 7 9-7" />
               </svg>
-              <p className="text-gray-800">Give us a call: <span className="font-semibold">+12345678909</span></p>
+              <p className="text-gray-800">Give us a call: <span className="font-semibold">+234-814-701-4806</span></p>
             </div>
           </div>
         </div>

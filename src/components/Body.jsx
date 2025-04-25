@@ -2,26 +2,23 @@ import React from 'react';
 
 const Body = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+    <div className="min-h-screen  flex items-center justify-center p-6">
       <div className="max-w-2xl text-center">
-        {/* Welcome Message */}
         <div className="flex items-center justify-center mb-4">
           <div className="w-12 h-0.5 bg-teal-600 mr-3"></div>
           <p className="text-teal-600 uppercase text-sm tracking-widest">Welcome StanKay's Donation Hub</p>
           <div className="w-12 h-0.5 bg-teal-600 ml-3"></div>
         </div>
 
-        {/* Headline */}
         <h1 className="text-4xl md:text-5xl font-bold text-amber-600 mb-6">
           Small Actions Lead To Big Change
         </h1>
 
-        {/* Paragraph */}
         <p className="text-gray-600 text-lg mb-8">
+        It's estimated that approximately 1.1 billion people are homeless worldwide,
           That’s 14% of the world’s population. Put another way, that’s 1 in 8 people alive today living without hope amongst trash, sewage, drugs, and abuse in unimaginable conditions. Life without secure housing is a life without basic needs being met.
         </p>
 
-        {/* Stats */}
         <div className="flex justify-center space-x-12 mb-10">
           <div className="flex flex-col items-center">
             <div className="flex space-x-2 mb-2">
@@ -30,7 +27,7 @@ const Body = () => {
               </svg>
               <span className="text-2xl font-bold text-gray-800">3,750</span>
             </div>
-            <p className="text-gray-600 uppercase text-sm">Volunteers</p>
+            <p className="text-gray-600 uppercase text-sm">Individual Funds Donations</p>
           </div>
 
           <div className="flex flex-col items-center">
@@ -40,13 +37,12 @@ const Body = () => {
               </svg>
               <span className="text-2xl font-bold text-gray-800">14,800</span>
             </div>
-            <p className="text-gray-600 uppercase text-sm">Trusted Funds</p>
+            <p className="text-gray-600 uppercase text-sm">Individual Food Donations</p>
           </div>
         </div>
 
-        {/* Call to Action Button */}
         <button className="bg-amber-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-amber-700 transition duration-300">
-          Become A Volunteer
+          Donate Now
         </button>
       </div>
     </div>

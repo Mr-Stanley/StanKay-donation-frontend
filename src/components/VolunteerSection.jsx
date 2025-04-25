@@ -1,26 +1,24 @@
 import React from 'react';
-import 'animate.css'; // Ensure animate.css is imported
+import 'animate.css'; 
 
 const VolunteerSection = () => {
   return (
-    <div className="py-16 bg-gray-100">
+    <div className="py-16 ">
       <div className="max-w-6xl mx-auto px-4">
-        {/* Header Section */}
+        
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-4xl font-bold text-amber-600 animate__animated animate__fadeInDown">
             Our Expert Volunteer
           </h2>
-          <button className="border border-gray-300 text-gray-600 font-semibold py-2 px-4 rounded-full hover:bg-gray-200 transition duration-300 animate__animated animate__fadeInDown">
-            View All Members
-          </button>
+         
         </div>
 
-        {/* Volunteer Cards */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Card 1 */}
-          <div className="bg-white rounded-lg shadow-lg p-6 text-center animate__animated animate__fadeInUp">
+          
+          <div className="bg-white rounded-lg shadow-lg p-10 text-center animate__animated animate__fadeInUp">
             <img
-              src="/adams-hobes.jpg" // Replace with your image path
+              src="/DSC01416.jpg" 
               alt="Stanley Ugochukwu"
               className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
             />
@@ -51,10 +49,10 @@ const VolunteerSection = () => {
             </div>
           </div>
 
-          {/* Card 2 */}
-          <div className="bg-white rounded-lg shadow-lg p-6 text-center animate__animated animate__fadeInUp">
+          
+          <div className="bg-white rounded-lg shadow-lg p-10 text-center animate__animated animate__fadeInUp">
             <img
-              src="/natasha-gamble.jpg" // Replace with your image path
+              src="/DSC01830.jpg" 
               alt="Korede"
               className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
             />

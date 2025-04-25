@@ -1,8 +1,8 @@
 function Footer() {
     return (
-      <footer className="bg-gray-800 text-white py-4">
+      <footer className="bg-black text-white py-4">
         <div className="container mx-auto px-4 text-center">
-          <p>© 2025 Stakay. All rights reserved.</p>
+          <p>© 2025 Stankay. All rights reserved.</p>
         </div>
       </footer>
     )
