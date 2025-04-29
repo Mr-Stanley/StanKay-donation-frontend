@@ -1,3 +1,4 @@
+
 import React from 'react';
 import 'animate.css'; 
 import photo1 from '/photostream1.jpg';
@@ -13,8 +14,8 @@ const FooterSection = () => {
 
   return (
    
-    <div className=" w-full">
-         <h1 className="text-4xl font-bold text-center text-yellow-500 mb-8 animate__animated animate__fadeInDown">
+    <div className=" w-full bg-gray-400 ">
+         <h1 className="text-4xl font-bold text-center text-green-500 mb-8 animate__animated animate__fadeInDown">
          Our World Wide Partner</h1>
         <div className=" py-8 w-full">
           <div className="max-w-3xl mx-auto px-2 flex justify-between items-center flex-wrap gap-2">
@@ -22,6 +23,7 @@ const FooterSection = () => {
             <img src="/samsung-logo.png" alt="Logo 2" className="h-10 animate__animated animate__fadeIn" />
             <img src="/sui-logo.jpeg" alt="Logo 3" className="h-10 animate__animated animate__fadeIn" />
             <img src="/amazon-logo.png" alt="Logo 4" className="h-10 animate__animated animate__fadeIn" />
+
           </div>
         </div>
 
