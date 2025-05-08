@@ -1,5 +1,5 @@
 import React from 'react';
-import SignupPage from '../pages/SignupPage.jsx';
+// import SignupPage from '../pages/SignupPage.jsx';
 import Layout from '../components/Layout.jsx';
 import LoginPage from '../pages/LoginPage.jsx';
 import DonateNowPage from '../pages/DonateNowPage.jsx';
