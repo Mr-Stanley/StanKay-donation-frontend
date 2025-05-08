@@ -1,5 +1,5 @@
 import React from 'react';
-import SignUpPage from '../pages/SignupPage.jsx';
+import SignupPage from '../pages/SignupPage.jsx';
 import Layout from '../components/Layout.jsx';
 import LoginPage from '../pages/LoginPage.jsx';
 import DonateNowPage from '../pages/DonateNowPage.jsx';
@@ -21,7 +21,7 @@ export const ROUTES = [
 },
       {
         path: '/sign-up',
-        element: <SignUpPage />,
+        element: <SignupPage />,
       },
       {
         path: '/LoginPage',
