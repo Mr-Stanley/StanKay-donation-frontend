@@ -4,7 +4,7 @@ import axios from 'axios';
 import { motion } from 'framer-motion';
 import { FiUser, FiMail, FiLock, FiCheck } from 'react-icons/fi';
 
-const SignUpPage = () => {
+const SignupPage = () => {
   const [userProfile, setUserProfile] = useState({
     username: '',
     email: '',
