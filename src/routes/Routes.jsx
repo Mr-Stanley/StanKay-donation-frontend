@@ -4,6 +4,13 @@ import Layout from '../components/Layout.jsx';
 import LoginPage from '../pages/LoginPage.jsx';
 import DonateNowPage from '../pages/DonateNowPage.jsx';
 import UserDashboard from '../pages/UserDashboard.jsx';
+import AdminDashboard from '../pages/AdminDashboard.jsx';
+import AdminLogin from '../pages/AdminLogin.jsx';
+import CharitiesManagement from '../pages/charitiesManagement.jsx';
+import AddCharity from '../pages/AddCharity.jsx';
+import EditCharity from '../pages/EditCharity.jsx';
+import DonationsManagement from '../pages/DonationsManagement.jsx';
+
 import { Navigate } from 'react-router-dom';
 
 
@@ -30,51 +37,29 @@ export const ROUTES = [
             <UserDashboard/>
         ),
       },
+      {
+        path: '/AdminDashboard',
+        element: <AdminDashboard/>,
+      },
+      {
+        path: '/AdminLogin',
+        element: <AdminLogin/>,
+      },
+      {
+        path: '/CharitiesManagement',
+        element: <CharitiesManagement/>,
+      },
+      {
+        path: '/AddCharity',
+        element: <AddCharity/>,
+      },
+      {
+        path: '/EditCharity',
+        element: <EditCharity/>,
+      },
+      {
+        path: '/DonationsManagement',
+        element: <DonationsManagement/>,
+      },
+
 ];
-
-
-
-
-
-
-
-
-// import React from 'react'; 
-// import SignUpPage from '../pages/SignupPage.jsx';
-// import Layout from '../components/Layout.jsx';
-// import LoginPage from '../pages/LoginPage.jsx';
-// import DonateNowPage from '../pages/DonateNowPage.jsx';
-// import UserDashboard from '../pages/UserDashboard.jsx';
-
-
-
-
-// export const ROUTES = [
-//     {
-//         path: '/',
-//         element: <Layout />,
-//     },
-
-//     {
-//         path:'/sign-up',
-//         element: <SignUpPage />,
-
-//     },
-
-//     {
-//         path: '/LoginPage',
-//         element: <LoginPage />,
-//     },
- 
-//     {
-//         path: '/DonateNowPage',
-//         element: <DonateNowPage/>,
-//     },
-//     {
-//         path: '/UserDashboard',
-//         element: <UserDashboard/>,
-    
-//     },
-
-
-// ]

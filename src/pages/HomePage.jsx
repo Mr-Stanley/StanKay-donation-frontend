@@ -7,7 +7,6 @@ import VolunteerSection from '../components/VolunteerSection'
 import FooterSection from '../components/FooterSection'
 import AboutSection from '../components/AboutSection'
 import HowCanYouHelpSection from '../components/HowCanYouHelpSection'
-import { Link } from 'react-router-dom';
 import '../index.css';
 
 

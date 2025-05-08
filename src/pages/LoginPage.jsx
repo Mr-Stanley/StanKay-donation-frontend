@@ -51,8 +51,8 @@ const LoginPage = () => {
 
        if (response.ok) {
     localStorage.setItem('token', data.token);
-    localStorage.setItem('isLoggedIn', 'true'); // Add this line
-    localStorage.setItem('userName', data.user?.name || 'User'); // Add this
+    localStorage.setItem('isLoggedIn', 'true'); 
+    localStorage.setItem('userName', data.user?.name || 'User'); 
     
     await new Promise(resolve => setTimeout(resolve, 1000));
     navigate('/UserDashboard');
@@ -89,13 +89,13 @@ const LoginPage = () => {
             className="relative z-10"
           >
             <h1 className="text-4xl font-bold text-white mb-4">Welcome Back</h1>
-            <p className="text-indigo-200 text-lg mb-8">Feed a child today!</p>
+            <p className="text-indigo-200 text-lg mb-8">Make a difference today</p>
             
             <div className="space-y-4">
               {[
-                "Access exclusive content",
-                "Track your progress",
-                "Connect with community"
+                "Feed a child today",
+                "Support education",
+                "Provide healthcare",
               ].map((item, index) => (
                 <motion.div 
                   key={index}

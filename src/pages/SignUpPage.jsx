@@ -16,7 +16,6 @@ const SignUpPage = () => {
   const [passwordStrength, setPasswordStrength] = useState(0);
   const navigate = useNavigate();
 
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
@@ -34,7 +33,6 @@ const SignUpPage = () => {
     }
   };
 
-  // Check password strength
   useEffect(() => {
     if (userProfile.password.length === 0) {
       setPasswordStrength(0);
@@ -97,7 +95,6 @@ const SignUpPage = () => {
         transition={{ duration: 0.3 }}
         className="flex w-full max-w-4xl bg-white rounded-2xl shadow-xl overflow-hidden"
       >
-        {/* Left Panel - Visual Appeal */}
         <div className="hidden md:flex md:w-1/2 bg-gradient-to-br from-purple-600 to-indigo-600 p-8 flex-col justify-center relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-white"></div>
@@ -116,7 +113,7 @@ const SignUpPage = () => {
             
             <div className="space-y-4">
               {[
-                "Exclusive member benefits",
+                "Make a difference",
                 "Personalized experience",
                 "Secure data protection"
               ].map((item, index) => (
@@ -137,7 +134,6 @@ const SignUpPage = () => {
           </motion.div>
         </div>
         
-        {/* Right Panel - Form */}
         <div className="w-full md:w-1/2 p-8 md:p-10">
           <div className="flex justify-between items-center mb-8">
             <motion.h2 
