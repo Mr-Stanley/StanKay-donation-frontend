@@ -1,16 +1,15 @@
 import React from 'react';
-import SignupPage from '../pages/SignupPage.jsx';
 import Layout from '../components/Layout.jsx';
-import LoginPage from '../pages/LoginPage.jsx';
-import DonateNowPage from '../pages/DonateNowPage.jsx';
-import UserDashboard from '../pages/UserDashboard.jsx';
-import AdminDashboard from '../pages/AdminDashboard.jsx';
-import AdminLogin from '../pages/AdminLogin.jsx';
-import CharitiesManagement from '../pages/charitiesManagement.jsx';
-import AddCharity from '../pages/AddCharity.jsx';
-import EditCharity from '../pages/EditCharity.jsx';
-import DonationsManagement from '../pages/DonationsManagement.jsx';
-
+import LoginPage from '../pages/homepage/LoginPage.jsx';
+import DonateNowPage from '../pages/donateNowPage/DonateNowPage.jsx';
+import UserDashboard from '../pages/userDashboard/UserDashboard.jsx';
+import AdminDashboard from '../pages/adminDashboard/AdminDashboard.jsx';
+import AdminLogin from '../pages/adminLogin/AdminLogin.jsx';
+import CharitiesManagement from '../pages/charityManagement/charitiesManagement.jsx';
+import AddCharity from '../pages/addCharity/AddCharity.jsx';
+import EditCharity from '../pages/addCharity/EditCharity.jsx';
+import DonationsManagement from '../pages/donationManagement/DonationsManagement.jsx';
+import SignupPage from '../pages/homepage/SignupPage.jsx';
 
 
 export const ROUTES = [

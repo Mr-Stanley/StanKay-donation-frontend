@@ -1,12 +1,12 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Slider from '../components/Slider'
-import Body from '../components/Body'
-import HeroSection from '../components/HeroSection'
-import VolunteerSection from '../components/VolunteerSection'
-import FooterSection from '../components/FooterSection'
-import AboutSection from '../components/AboutSection'
-import HowCanYouHelpSection from '../components/HowCanYouHelpSection'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
+import Slider from '../../components/Slider'
+import Body from '../../components/Body'
+import HeroSection from '../../components/HeroSection'
+import VolunteerSection from '../../components/VolunteerSection'
+import FooterSection from '../../components/FooterSection'
+import AboutSection from '../../components/AboutSection'
+import HowCanYouHelpSection from '../../components/HowCanYouHelpSection'
 import '../index.css';
 
 

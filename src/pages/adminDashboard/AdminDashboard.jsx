@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { useNavigate, Routes, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 
-import DonationsManagement from './DonationsManagement.jsx';
-import CharitiesManagement from './charitiesManagement.jsx';
-import AddCharity from './AddCharity.jsx';
-import EditCharity from './EditCharity.jsx';
-import DashboardHome from '../admin/DashboardHome.jsx';
+import DonationsManagement from '../donationManagement/DonationsManagement.jsx';
+import CharitiesManagement from '../charityManagement/charitiesManagement.jsx';
+import AddCharity from '../addCharity/AddCharity.jsx';
+import EditCharity from '../addCharity/EditCharity.jsx';
+import DashboardHome from '../../admin/DashboardHome.jsx';
 
 const AdminDashboard = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
