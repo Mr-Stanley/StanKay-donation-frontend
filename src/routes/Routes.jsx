@@ -11,7 +11,6 @@ import AddCharity from '../pages/AddCharity.jsx';
 import EditCharity from '../pages/EditCharity.jsx';
 import DonationsManagement from '../pages/DonationsManagement.jsx';
 
-import { Navigate } from 'react-router-dom';
 
 
 export const ROUTES = [
