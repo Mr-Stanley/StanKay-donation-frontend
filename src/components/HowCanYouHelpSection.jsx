@@ -6,7 +6,6 @@ const HowCanYouHelpSection = () => {
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
-    // Crazy floating emoji background
     const emojis = ['❤️', '🍞', '🧥', '🏠', '🤲', '🌍', '💵', '🔄'];
     const container = document.createElement('div');
     container.style.position = 'fixed';
@@ -32,7 +31,6 @@ const HowCanYouHelpSection = () => {
       container.appendChild(emoji);
     }
 
-    // Add keyframes dynamically
     const style = document.createElement('style');
     style.textContent = `
       @keyframes float {
@@ -73,7 +71,6 @@ const HowCanYouHelpSection = () => {
 
   return (
     <div className="py-16 w-full bg-black relative overflow-hidden">
-      {/* Crazy background elements */}
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
           <div 
@@ -108,7 +105,6 @@ const HowCanYouHelpSection = () => {
           How Can You Help?
         </h2>
 
-        {/* Crazy interactive tabs */}
         <div className="flex justify-center mb-8 gap-4">
           {tabs.map((tab, index) => (
             <button
@@ -126,7 +122,6 @@ const HowCanYouHelpSection = () => {
           ))}
         </div>
 
-        {/* Animated content area */}
         <div 
           className="relative bg-black bg-opacity-70 backdrop-blur-lg rounded-2xl p-8 mb-12 border-2 border-white border-opacity-20 overflow-hidden"
           onMouseEnter={() => setIsHovering(true)}
@@ -136,7 +131,6 @@ const HowCanYouHelpSection = () => {
             transition: 'all 0.3s ease'
           }}
         >
-          {/* Floating emojis inside content */}
           <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
             {[...Array(5)].map((_, i) => (
               <div 
@@ -172,7 +166,6 @@ const HowCanYouHelpSection = () => {
           </button>
         </div>
 
-        {/* Crazy call-to-action */}
         <div className="text-center mt-12">
           <button 
             className="text-2xl font-bold py-4 px-8 rounded-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-pink-500 hover:to-yellow-500 transition-all duration-500 transform hover:scale-105"
@@ -186,7 +179,6 @@ const HowCanYouHelpSection = () => {
         </div>
       </div>
 
-      {/* Add dynamic styles */}
       <style jsx>{`
         @keyframes gradientShift {
           0% { background-position: 0% 50%; }
@@ -204,63 +196,3 @@ const HowCanYouHelpSection = () => {
 };
 
 export default HowCanYouHelpSection;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from 'react';
-// import 'animate.css'; 
-
-// const HowCanYouHelpSection = () => {
-//   return (
-//     <div className=" py-16 w-full">
-//       <div className="max-w-3xl mx-auto px-4">
-//         <h2 className="text-4xl md:text-5xl font-bold text-green-500 text-center mb-12 animate__animated animate__fadeInDown">
-//           How Can You Help?
-//         </h2>
-
-//         <div className="mb-12 animate__animated animate__fadeInUp">
-//           <h3 className="text-2xl font-semibold text-white mb-4">Volunteer Opportunities</h3>
-//           <p className="text-gray-300 text-lg mb-6">
-//             Provide information about local volunteer opportunities with shelters, food banks, and outreach programs. Include details on how individuals can contribute their time and skills to make a positive impact on the lives of the homeless.
-//           </p>
-//           <button className="bg-transparent border-2 border-white text-white font-semibold py-2 px-6 rounded-full hover:bg-white hover:text-gray-700 transition duration-300">
-//             More
-//           </button>
-//         </div>
-
-//         <div className="mb-12 animate__animated animate__fadeInUp">
-//           <h3 className="text-2xl font-semibold text-white mb-4">Donations</h3>
-//           <p className="text-gray-300 text-lg mb-6">
-//             Encourage monetary donations or the donation of essential items such as clothing, blankets, and non-perishable food items. Clearly outline the process for making financial contributions and specify the types of goods that are most needed by homeless individuals and shelters.
-//           </p>
-//           <button className="bg-transparent border-2 border-white text-white font-semibold py-2 px-6 rounded-full hover:bg-white hover:text-gray-700 transition duration-300">
-//             More
-//           </button>
-//         </div>
-
-//         <div className="animate__animated animate__fadeInUp">
-//           <h3 className="text-2xl font-semibold text-white mb-4">Raise Awareness</h3>
-//           <p className="text-gray-300 text-lg mb-6">
-//             Empower visitors to the website to become advocates for homeless individuals by providing resources on how to raise awareness in their communities. This could include sharing information on social media, organizing community events, or engaging with local policymakers to address systemic issues related to homelessness.
-//           </p>
-//           <button className="bg-transparent border-2 border-white text-white font-semibold py-2 px-6 rounded-full hover:bg-white hover:text-gray-700 transition duration-300">
-//             More
-//           </button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HowCanYouHelpSection;

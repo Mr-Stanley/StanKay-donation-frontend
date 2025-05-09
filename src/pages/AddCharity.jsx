@@ -71,7 +71,6 @@ const AddCharity = () => {
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-8">
-        {/* Basic Information */}
         <div className="bg-black bg-opacity-30 p-6 rounded-xl border border-white border-opacity-10">
           <h3 className="text-lg font-medium text-white mb-4">Basic Information</h3>
           <div className="space-y-4">
@@ -100,7 +99,6 @@ const AddCharity = () => {
           </div>
         </div>
 
-        {/* Address Information */}
         <div className="bg-black bg-opacity-30 p-6 rounded-xl border border-white border-opacity-10">
           <h3 className="text-lg font-medium text-white mb-4">Address Information</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -161,7 +159,6 @@ const AddCharity = () => {
           </div>
         </div>
 
-        {/* Contact Information */}
         <div className="bg-black bg-opacity-30 p-6 rounded-xl border border-white border-opacity-10">
           <h3 className="text-lg font-medium text-white mb-4">Contact Information</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -201,7 +198,6 @@ const AddCharity = () => {
           </div>
         </div>
 
-        {/* Status */}
         <div className="flex items-center">
           <input
             type="checkbox"
@@ -213,7 +209,6 @@ const AddCharity = () => {
           <label className="ml-2 block text-sm text-purple-200">Active Charity</label>
         </div>
 
-        {/* Form Actions */}
         <div className="flex justify-end space-x-4 pt-6">
           <button
             type="button"

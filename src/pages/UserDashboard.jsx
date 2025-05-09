@@ -21,7 +21,6 @@ const UserDashboard = () => {
   const invitationLink = 'https://donationplatform.com/invite?ref=olivia123';
   const navigate = useNavigate();
 
-  // Calculate total donated and impact
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (!token) {
@@ -31,13 +30,11 @@ const UserDashboard = () => {
       if (storedName) setUserName(storedName);
     }
 
-    // Calculate total donations
     const total = donationHistory.reduce((sum, donation) => sum + donation.amount, 0);
     setTotalDonated(total);
     
-    // Animate impact counter
     const timer = setTimeout(() => {
-      setImpactCount(12); // Example impact number
+      setImpactCount(12); 
     }, 500);
 
     return () => clearTimeout(timer);
@@ -60,7 +57,6 @@ const UserDashboard = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -88,7 +84,6 @@ const UserDashboard = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 p-4 md:p-6 font-sans">
-      {/* Header */}
       <motion.header 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -104,14 +99,20 @@ const UserDashboard = () => {
         
         <nav className="flex space-x-1 md:space-x-4 bg-gray-100 p-1 rounded-lg">
           {[
-            { id: 'overview', icon: null, label: 'Overview' },
+            { id: 'Home', icon: null, label: 'Home', path:'/' },
             { id: 'analytics', icon: <FaChartLine className="mr-1" />, label: 'Analytics' },
             { id: 'history', icon: <FaHistory className="mr-1" />, label: 'History' },
             { id: 'settings', icon: <FaCog className="mr-1" />, label: 'Settings' }
           ].map((tab) => (
             <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
+            key={tab.id}
+            onClick={() => {
+              if (tab.id === 'Home') {
+                navigate('/');
+              } else {
+                setActiveTab(tab.id);
+              }
+            }}
               className={`flex items-center px-3 py-1 rounded-md text-sm md:text-base ${activeTab === tab.id ? 'bg-white shadow-sm text-purple-600' : 'text-gray-600 hover:text-gray-800'}`}
             >
               {tab.icon}
@@ -150,7 +151,6 @@ const UserDashboard = () => {
         </div>
       </motion.header>
 
-      {/* Welcome and Stats */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -203,9 +203,7 @@ const UserDashboard = () => {
         </motion.div>
       </motion.div>
 
-      {/* Main Content */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Donation History */}
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -255,9 +253,7 @@ const UserDashboard = () => {
           </div>
         </motion.div>
 
-        {/* Sidebar */}
         <div className="space-y-6">
-          {/* Invitation Link */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -290,7 +286,6 @@ const UserDashboard = () => {
             </div>
           </motion.div>
 
-          {/* Make New Donation */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -311,7 +306,6 @@ const UserDashboard = () => {
             </button>
           </motion.div>
 
-          {/* Quick Actions */}
           <motion.div 
             variants={fadeIn}
             initial="hidden"

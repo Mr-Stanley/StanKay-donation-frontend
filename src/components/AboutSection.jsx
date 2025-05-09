@@ -3,7 +3,6 @@ import 'animate.css';
 
 const AboutSection = () => {
   useEffect(() => {
-    // Create particle effect
     const canvas = document.createElement('canvas');
     canvas.style.position = 'fixed';
     canvas.style.top = '0';
@@ -18,12 +17,10 @@ const AboutSection = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Particle settings
     const particles = [];
     const particleCount = 150;
     const colors = ['#FFFF00', '#FFA500', '#FFD700', '#FF6347', '#FF4500', '#FF8C00'];
 
-    // Create particles
     for (let i = 0; i < particleCount; i++) {
       particles.push({
         x: Math.random() * canvas.width,
@@ -35,7 +32,6 @@ const AboutSection = () => {
       });
     }
 
-    // Animation loop
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
@@ -47,11 +43,9 @@ const AboutSection = () => {
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fill();
         
-        // Move particles
         p.x += p.speedX;
         p.y += p.speedY;
         
-        // Reset particles that go off screen
         if (p.x < 0 || p.x > canvas.width || p.y < 0 || p.y > canvas.height) {
           p.x = Math.random() * canvas.width;
           p.y = Math.random() * canvas.height;
@@ -63,7 +57,6 @@ const AboutSection = () => {
 
     animate();
 
-    // Handle resize
     function handleResize() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -79,7 +72,6 @@ const AboutSection = () => {
 
   return (
     <div className="py-16 bg-black text-white relative overflow-hidden">
-      {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
           <div 

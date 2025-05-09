@@ -114,7 +114,6 @@ const LoginPage = () => {
           </motion.div>
         </div>
         
-        {/* Right Panel - Form */}
         <div className="w-full md:w-1/2 p-8 md:p-10">
           <div className="flex justify-between items-center mb-8">
             <motion.h2 

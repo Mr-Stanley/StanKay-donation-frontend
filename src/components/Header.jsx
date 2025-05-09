@@ -139,7 +139,6 @@ const Header = () => {
             }`}
         >
             <div className="container mx-auto flex items-center justify-between p-4 relative">
-                {/* Logo with animation */}
                 <Link 
                     to="/" 
                     className="font-bold text-2xl relative group"
@@ -153,7 +152,6 @@ const Header = () => {
                     />
                 </Link>
 
-                {/* Desktop Nav */}
                 <nav className="hidden md:flex gap-6 items-center">
                     {navItems.map((item, idx) =>
                         item.links ? (
@@ -191,7 +189,6 @@ const Header = () => {
                     </Link>
                 </nav>
 
-                {/* Mobile Toggle Button with animation */}
                 <div className="md:hidden">
                     <button 
                         onClick={() => setMobileOpen(!mobileOpen)}
@@ -209,7 +206,6 @@ const Header = () => {
                 </div>
             </div>
 
-            {/* Mobile Menu with animated entrance */}
             {mobileOpen && (
                 <div 
                     className={`md:hidden px-6 py-4 bg-gradient-to-b from-gray-900 to-black space-y-4 ${
@@ -248,7 +244,6 @@ const Header = () => {
                 </div>
             )}
 
-            {/* Embedded animations */}
             <style dangerouslySetInnerHTML={{
                 __html: `
                     @keyframes fadeIn {

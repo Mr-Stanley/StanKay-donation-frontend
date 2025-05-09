@@ -13,7 +13,6 @@ const Slider = () => {
   const sliderRef = useRef(null);
   const overlayRef = useRef(null);
 
-  // Dynamic gradient overlay effect
   useEffect(() => {
     const overlay = overlayRef.current;
     let hue = 0;
@@ -34,7 +33,6 @@ const Slider = () => {
 
   return (
     <div className="relative bg-black w-full h-[800px] overflow-hidden">
-      {/* Animated background particles */}
       <div className="absolute inset-0 overflow-hidden z-0">
         {[...Array(30)].map((_, i) => {
           const size = `${Math.random() * 10 + 5}px`;
@@ -82,7 +80,6 @@ const Slider = () => {
               }}
             />
             
-            {/* Dynamic gradient overlay */}
             <div 
               ref={overlayRef}
               className="absolute inset-0 mix-blend-multiply"
@@ -91,7 +88,6 @@ const Slider = () => {
               }}
             />
             
-            {/* Content with enhanced effects */}
             <div className="absolute top-1/2 left-5 transform -translate-y-1/2 text-white">
               <h1 
                 className="animate__animated animate__fadeInUp text-5xl font-bold whitespace-pre-line"
@@ -175,7 +171,6 @@ const Slider = () => {
         ))}
       </div>
 
-      {/* Floating decorative elements */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 flex space-x-4">
         {[...Array(3)].map((_, i) => (
           <div 
@@ -192,7 +187,6 @@ const Slider = () => {
         ))}
       </div>
 
-      {/* Embedded styles for animations */}
       <style dangerouslySetInnerHTML={{
         __html: `
           @keyframes float {
@@ -231,77 +225,3 @@ export default Slider;
 
 
 
-// import React, { useRef } from 'react';
-// import 'animate.css';
-// import { Link } from 'react-router-dom';
-
-// const slides = [
- 
-//   {
-//     image: '/homeless3.jpg',
-//     title: 'Make a Difference Today',
-//   },
-  
-// ];
-
-// const Slider = () => {
-//   const sliderRef = useRef(null);
-
-//   const scroll = (direction) => {
-//     const slider = sliderRef.current;
-//     const scrollAmount = slider.offsetWidth;
-//     if (direction === 'left') {
-//       slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-//     } else {
-//       slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-//     }
-//   };
-
-//   return (
-//     <div className="relative bg-black w-full h-[800px] overflow-hidden">
-//       <div
-//         ref={sliderRef}
-//         className="flex overflow-x-auto scroll-smooth  snap-x snap-mandatory w-full h-full"
-//       >
-//         {slides.map((slide, index) => (
-//           <div
-//             key={index}
-//             className="flex-shrink-0 w-full h-full relative snap-center"
-//           >
-//             <img
-//               src={slide.image}
-//               alt={`Slide ${index + 1}`}
-//               className="w-full h-full object-cover"
-//             />
-//             <div className="absolute top-1/2 left-5 transform -translate-y-1/2 text-white">
-//               <h1 className="animate__animated animate__fadeInUp text-5xl font-bold whitespace-pre-line">
-//                 {slide.title}
-//               </h1>
-//               <div className="mt-4 display flex  gap-10">
-//               <div className="mt-4">
-//               <Link
-//                         to="/DonateNowPage"
-//                         className="bg-green-500 text-white px-6 py-3 rounded-md">
-//                         DONATE NOW
-//                     </Link>
-//               </div>
-//               <div className="mt-4 bg-transparent">
-//                 <Link
-//                       to="/sign-up" 
-//                       className="bg-transparent text-white px-6 py-3 rounded-md border border-white">
-//                   SIGN-UP
-//                 </Link>
-//               </div>
-//               </div>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-
-  
-      
-//     </div>
-//   );
-// };
-
-// export default Slider;

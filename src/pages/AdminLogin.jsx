@@ -21,36 +21,28 @@ const AdminLogin = ({ setIsAuthenticated }) => {
         password: password.trim()
       });
 
-      // Check for successful response structure
       if (response.data && response.data.token) {
         localStorage.setItem('adminToken', response.data.token);
         
-        // Store admin data if available
         if (response.data.admin) {
           localStorage.setItem('adminData', JSON.stringify(response.data.admin));
         }
 
-        // Redirect to admin dashboard
         navigate('/AdminDashboard');
-        return; // Important: Return after successful navigation
+        return; 
       }
 
-      // Handle unexpected response structure
       throw new Error(response.data?.message || 'Login successful but no token received');
 
     } catch (err) {
       console.error('Login error:', err);
       
-      // Handle different error types
       if (err.response) {
-        // Server responded with error status
         setError(err.response.data.message || 'Login failed. Please check your credentials.');
       } else if (err.request) {
-        // Request was made but no response received
         setError('Network error. Please check your connection.');
       } else {
-        // Other errors (including our custom error)
-        // Only show error if it's not our success message
+       
         if (err.message !== 'Login successful but no token received') {
           setError(err.message || 'An unexpected error occurred.');
         }

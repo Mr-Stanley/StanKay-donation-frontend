@@ -5,11 +5,9 @@ import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   useEffect(() => {
-    // Create more complex particle effects
     const container = document.querySelector('.particle-container');
     if (!container) return;
 
-    // Clear existing particles
     container.innerHTML = '';
 
     const particleTypes = [
@@ -27,7 +25,6 @@ const HeroSection = () => {
       }
     ];
 
-    // Create particles
     for (let i = 0; i < 100; i++) {
       const particle = document.createElement('div');
       const type = particleTypes[Math.floor(Math.random() * particleTypes.length)];
@@ -51,7 +48,6 @@ const HeroSection = () => {
       container.appendChild(particle);
     }
 
-    // Add styles
     const style = document.createElement('style');
     style.innerHTML = `
       @keyframes float {
@@ -99,13 +95,10 @@ const HeroSection = () => {
         backgroundImage: `url(${HeroImage})`,
       }}
     >
-      {/* Particle Background Animation */}
       <div className="particle-container absolute inset-0" />
       
-      {/* Gradient Overlay */}
       <div className="hero-gradient-overlay absolute inset-0" />
       
-      {/* Foreground Content */}
       <div className="hero-content absolute inset-0 flex flex-col justify-center items-start p-8 md:p-16 z-10">
         <div className="flex items-center mb-4 animate__animated animate__fadeInDown">
           <div className="w-6 h-0.5 bg-amber-500 mr-3"></div>

@@ -88,8 +88,7 @@ const EditCharity = () => {
         </button>
       </div>
 
-      {/* Same form structure as AddCharity */}
-      {/* ... */}
+    
     </div>
   );
 };
